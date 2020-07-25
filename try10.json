@@ -1,0 +1,439 @@
+{
+  "date": "2020-07-06T20:02:23.738531023-07:00",
+  "version": {
+    "version": "v2.1.9",
+    "helmVersion": "v2.12.3",
+    "casectl": "v1.2.0",
+    "build": "59197ab"
+  },
+  "numFail": 1,
+  "products": {
+    "helm-chart/ibm-dap-base-prod": {
+      "pass": false,
+      "name": "ibm-dap-base-prod",
+      "type": "helm-chart",
+      "product": {
+        "subcharts": 0,
+        "version": "3.0.1"
+      },
+      "messages": [
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter ingress.tls.secret might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter microservice.rootPath might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "INFO",
+          "text": "no instance of SCH found, it is recommended to use the Shared Configurable Helpers (SCH)",
+          "rule": "ChartUsesSCH"
+        },
+        {
+          "severity": "INFO",
+          "paths": [
+            "Chart.yaml"
+          ],
+          "text": "icon is recommended",
+          "rule": "StandardHelmLint"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/asset-files-api:v3.0.1_260520\" at images[4].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/cp4d-ws-secrets-job:v3.0.1_260520\" at images[8].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/dap-dashboards-api:v3.0.1_260520\" at images[6].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/event-logger-api:v3.0.1_260520\" at images[9].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/ngp-projects-api:v3.0.1_260520\" at images[5].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/portal-common-api:v3.0.1_260520\" at images[1].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/portal-dashboards:v3.0.1_260520\" at images[7].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/portal-job-manager:v3.0.1_260520\" at images[2].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/portal-main:v3.0.1_260520\" at images[0].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v3.0.1_260520\" in tag for image \"cp.icr.io/cp/cpd/portal-notifications:v3.0.1_260520\" at images[3].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/asset-files-api:v3.0.1_260520\" at images[4].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/cp4d-ws-secrets-job:v3.0.1_260520\" at images[8].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/dap-dashboards-api:v3.0.1_260520\" at images[6].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/event-logger-api:v3.0.1_260520\" at images[9].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/ngp-projects-api:v3.0.1_260520\" at images[5].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/portal-common-api:v3.0.1_260520\" at images[1].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/portal-dashboards:v3.0.1_260520\" at images[7].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/portal-job-manager:v3.0.1_260520\" at images[2].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/portal-main:v3.0.1_260520\" at images[0].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "invalid arch \"\" in tag for image \"cp.icr.io/cp/cpd/portal-notifications:v3.0.1_260520\" at images[3].references[0].pull-repository, valid values are [\"amd64\" \"ppc64le\" \"s390x\"]",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "templates/pvc.yaml:23"
+          ],
+          "text": "expected use of storageClassName key to be within condition based on parameter containing \"useDynamicProvisioning\"",
+          "rule": "StorageClassNameInCondition"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "Chart.yaml"
+          ],
+          "text": "required chart keys [\"kubeVersion\"] not defined",
+          "rule": "RequiredChartKeysDefined"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "cv-tests"
+          ],
+          "text": "no application tests defined",
+          "rule": "AppTestExists"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "cv-tests"
+          ],
+          "text": "no install tests defined",
+          "rule": "InstallTestExists"
+        }
+      ],
+      "subcomponents": {
+        "helm-cvtest/ibm-dap-base-prod/default": {
+          "pass": false,
+          "name": "ibm-dap-base-prod/default",
+          "type": "helm-cvtest",
+          "messages": [
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "envvar.yaml:33"
+              ],
+              "text": "parameter is used but not defined: .Values.global.buildVersion",
+              "rule": "UsedParametersAreDefined"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/NOTES.txt:3"
+              ],
+              "text": "parameter is used but not defined: .Values.ingress.hosts",
+              "rule": "UsedParametersAreDefined"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/NOTES.txt:4"
+              ],
+              "text": "parameter is used but not defined: .Values.ingress.path",
+              "rule": "UsedParametersAreDefined"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/change-pvc-owner-job.yaml:55",
+                "templates/deployment.yaml:86",
+                "templates/secrets-create-job.yaml:57",
+                "templates/secrets-removal-job.yaml:57"
+              ],
+              "text": "parameter is used but not defined: .Values.global.dockerRegistryPrefix",
+              "rule": "UsedParametersAreDefined"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/ingress.yaml:5"
+              ],
+              "text": "parameter is used but not defined: .Values.ingress.name",
+              "rule": "UsedParametersAreDefined"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/pvc.yaml:22",
+                "templates/pvc.yaml:23"
+              ],
+              "text": "parameter is used but not defined: .Values.global.storageClassName",
+              "rule": "UsedParametersAreDefined"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/secrets-create-job.yaml",
+                "templates/secrets-removal-job.yaml"
+              ],
+              "text": "found helm hook",
+              "rule": "ReviewHelmHooks"
+            },
+            {
+              "severity": "WARNING",
+              "paths": [
+                "templates/deployment.yaml"
+              ],
+              "text": "multiple yaml documents in one file is not allowed",
+              "rule": "OneYAMLDocPerFile"
+            },
+            {
+              "severity": "WARNING",
+              "paths": [
+                "templates/service.yaml"
+              ],
+              "text": "multiple yaml documents in one file is not allowed",
+              "rule": "OneYAMLDocPerFile"
+            },
+            {
+              "severity": "ERROR",
+              "text": "no helm test defined",
+              "rule": "HelmTestExists"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/change-pvc-owner-job.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/change-pvc-owner-job.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.securityContext.runAsUser OR spec.template.spec.containers[0].securityContext.runAsUser, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/deployment.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/deployment.yaml (doc 1)"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/deployment.yaml (doc 2)"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/deployment.yaml (doc 3)"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/deployment.yaml (doc 4)"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/deployment.yaml (doc 5)"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/deployment.yaml (doc 6)"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/deployment.yaml (doc 7)"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/deployment.yaml (doc 8)"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/secrets-create-job.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/secrets-removal-job.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC",
+              "rule": "PodSecurityContextDefined"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
